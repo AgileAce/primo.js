@@ -1,8 +1,8 @@
 {
 	"name": "primo.js",
 	"private": true,
-	"version": "0.0.0",
-	"description": "a Sails application",
+	"version": "0.0.1",
+	"description": "Project Priorities and Reporting, using a full-stack JavaScript design.",
 	"keywords": [],
 	"dependencies": {
 		"sails": "~0.10.0-rc3",
@@ -29,8 +29,8 @@
 	"main": "app.js",
 	"repository": {
 		"type": "git",
-		"url": "git://github.com/cas/primo.js.git"
+		"url": "git://github.com/AgileAce/primo.js.git"
 	},
-	"author": "cas",
+	"author": "Cas du Plessis",
 	"license": ""
 }
