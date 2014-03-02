@@ -55,8 +55,13 @@ module.exports = function(grunt) {
    * Configure the gruntfile.
    */
   function configureGruntfile () {
+<<<<<<< HEAD
     var taskConfigurations = loadTasks('./tasks/config'),
         registerDefinitions = loadTasks('./tasks/register');
+=======
+    var taskConfigurations = loadTasks('./grunt/config'),
+        registerDefinitions = loadTasks('./grunt/register');
+>>>>>>> 0c83614989d26f4df2230a4d1986df975159bf2e
 
     invokeConfigFn(taskConfigurations);
     invokeConfigFn(registerDefinitions);

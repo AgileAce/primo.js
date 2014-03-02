@@ -29,8 +29,14 @@
   "main": "app.js",
   "repository": {
     "type": "git",
+<<<<<<< HEAD
     "url": "git://github.com/cas/primo.js.git"
   },
   "author": "cas",
+=======
+    "url": "git://github.com/casper/primo.js.git"
+  },
+  "author": "casper",
+>>>>>>> 0c83614989d26f4df2230a4d1986df975159bf2e
   "license": ""
 }
