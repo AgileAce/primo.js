@@ -114,3 +114,13 @@ npm-debug.log
 .netbeans
 nbproject
 .idea
+
+
+
+############################
+  # Tests
+############################
+testApp
+coverage
+
+
