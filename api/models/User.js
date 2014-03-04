@@ -36,7 +36,7 @@ module.exports = {
                     user.password = hash;
                     cb(null, user);
                 }
-            })
-        })
+            });
+        });
     }
 };

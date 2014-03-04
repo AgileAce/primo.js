@@ -7,23 +7,15 @@
 
 var passport = require('passport');
 module.exports = {
-	login: function(req, res) {
+    login: function (req, res) {
         res.view();
     },
-    process: function(reg, res) {
-        console.log('XXXXXX');
-        passport.authenticate('local', function(err, user, info) {
-            if ((err) || (!user)) {
-                return res.send({
-                    message: 'login failed!'
-                });
-                res.send(err);
-            }
-            req.logIn (user, function(err){
+	process: function(req, res) {
+        passport.authenticate('local', function(err, user, info){
+            if ((err) || (!user)) res.send(err);
+            req.logIn(user, function(err){
                 if (err) res.send(err);
-                return res.send({
-                    message: 'login successful!'
-                });
+                return res.send({message: 'logged in successfully!'});
             });
         })(req, res);
     },

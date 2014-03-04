@@ -26,11 +26,13 @@ function findByUsername (u, fn) {
 
 passport.serializeUser (function (user, done) {
     done(null, user.id);
-})
+});
 
 passport.deserializeUser (function (id, done) {
-    done(err, user);
-})
+    findById(id, function (err, user) {
+        done(err, user);
+    });
+});
 
 passport.use(new LocalStrategy(
     function (userName, password, done) {
@@ -48,16 +50,16 @@ passport.use(new LocalStrategy(
                         return done(null, false, {
                             message: 'Invalid password!'
                         });
-                    var returnedUser = {
+                    var returnUser = {
                         userName: user.userName,
                         createdAt: user.createdAt,
                         id: user.id
                     };
-                    return done(null, returnedUser, {
+                    return done(null, returnUser, {
                         message: 'Logged in Successfully!'
                     });
-                })
+                });
             })
-        })
+        });
     }
-))
+));

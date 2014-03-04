@@ -1,5 +1,7 @@
-module.exports = function (req, res, ok) {
-    var is_auth = req.isAuthenticated();
-    if (is_auth) return next();
-    else return res.redirect('/login');
+module.exports = function (req, res, next) {
+    if (req.isAuthenticated()) {
+        return next();
+    }else{
+        return res.send(403, {message: 'Not Authorized!'});
+    }
 };
